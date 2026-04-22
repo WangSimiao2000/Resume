@@ -1,5 +1,5 @@
 % !TEX program = xelatex
-\documentclass[10.5pt,a4paper]{article}
+\documentclass[10pt,a4paper]{article}
 
 \usepackage[margin=1.5cm]{geometry}
 \usepackage{xeCJK}
@@ -42,6 +42,9 @@
 % 列表样式
 \setlist[itemize]{leftmargin=1.5em, itemsep=1pt, parsep=0pt, topsep=2pt}
 
+% 小字号链接
+\newcommand{\smallurl}[1]{\href{#1}{{\small #1}}}
+
 \begin{document}
 
 % ===== 个人信息 =====
@@ -61,8 +64,8 @@
       \faEnvelope\ \href{mailto:mickeymiao2023@163.com}{mickeymiao2023@163.com}
     \end{tabular} \\[3pt]
     \begin{tabular}{c c}
-      \faGithub\ \href{https://github.com/wangsimiao2000}{GitHub} &
-      \faBlog\ \href{https://blog.mickeymiao.cn}{Blog}
+      \faGithub\ \href{https://github.com/wangsimiao2000}{github.com/wangsimiao2000} &
+      \faBlog\ \href{https://blog.mickeymiao.cn}{blog.mickeymiao.cn}
     \end{tabular}
   \end{center}
 \end{minipage}%
@@ -74,19 +77,18 @@
 % ===== 教育背景 =====
 \section{\faGraduationCap\ 教育背景}
 
-\textbf{英国利兹大学}（QS 世界第75，2023），利兹，英国 \hfill 2023.09 -- 2024.11 \\
+\textbf{英国利兹大学}（QS 世界第75），利兹，英国 \hfill 2023.09 -- 2024.11 \\
 硕士 · 高性能图形与游戏工程（计算机科学与技术）
 
 \vspace{3pt}
 
 \textbf{西南石油大学}（双一流），成都，四川 \hfill 2019.09 -- 2023.06 \\
-本科 · 软件工程
+学士 · 软件工程
 
 % ===== 工作经历 =====
 \section{\faBriefcase\ 工作经历}
 
-\textbf{北京小米移动软件有限公司} · 图形渲染开发工程师 \hfill 2025.02 -- 至今 \\
-北京总部
+\textbf{北京小米移动软件有限公司} · 图形渲染开发工程师 · 北京总部 \hfill 2025.02 -- 至今
 \begin{itemize}
   \item 参与嵌入式动效引擎核心模块的设计与开发
   \item 基于动效引擎进行穿戴系统动效应用开发
@@ -99,7 +101,7 @@
 \section{\faCode\ 项目经历}
 
 \textbf{SnowLeopardEngine\hspace{0.3em}—\hspace{0.3em}团队游戏引擎} \hfill 2023.09 -- 2024.06 \\
-C++ · OpenGL 4.6 · PhysX · XMake \hfill \faGithub\ \href{https://github.com/SnowLeopardEngine/SnowLeopardEngine}{GitHub}
+C++ · OpenGL 4.6 · PhysX · XMake \hfill \smallurl{https://github.com/SnowLeopardEngine/SnowLeopardEngine}
 \begin{itemize}
   \item 利兹大学7人团队课程项目，开发跨平台游戏引擎，支持 PBR 渲染、骨骼动画、后处理等
   \item 负责物理模块开发，基于 NVIDIA PhysX 实现各类 Collider 碰撞检测与刚体物理模拟
@@ -109,7 +111,7 @@ C++ · OpenGL 4.6 · PhysX · XMake \hfill \faGithub\ \href{https://github.com/S
 \vspace{3pt}
 
 \textbf{MinecraftSkin Raytracer\hspace{0.3em}—\hspace{0.3em}MC 皮肤光追渲染器} \hfill 2024 \\
-C++17 · Qt6 · OpenGL \hfill \faGithub\ \href{https://github.com/WangSimiao2000/MinecraftSkin_Raytracer}{GitHub}
+C++17 · Qt6 · OpenGL \hfill \smallurl{https://github.com/WangSimiao2000/MinecraftSkin\_Raytracer}
 \begin{itemize}
   \item 独立开发纯 CPU 软件光线追踪桌面应用，将 Minecraft 皮肤渲染为高质量图像
   \item 实现 Blinn-Phong 光照、多次反射、阴影，支持基于图块的多线程并行渲染
@@ -119,7 +121,7 @@ C++17 · Qt6 · OpenGL \hfill \faGithub\ \href{https://github.com/WangSimiao2000
 \vspace{3pt}
 
 \textbf{InfiniteVoxelCaveWorld\hspace{0.3em}—\hspace{0.3em}无限体素洞穴地形} \hfill 2024 \\
-C++ · OpenGL \hfill \faGithub\ \href{https://github.com/WangSimiao2000/InfiniteVoxelCaveWorld}{GitHub}
+C++ · OpenGL \hfill \smallurl{https://github.com/WangSimiao2000/InfiniteVoxelCaveWorld}
 \begin{itemize}
   \item 实现基于区块的程序化无限体素洞穴地形生成，使用 OpenSimplex2 噪声控制地形与洞穴阈值
   \item 采用体素相邻面剔除与视锥体剔除优化渲染性能，使用 GLSL 实现 Blinn-Phong 着色
@@ -129,7 +131,7 @@ C++ · OpenGL \hfill \faGithub\ \href{https://github.com/WangSimiao2000/Infinite
 \vspace{3pt}
 
 \textbf{OutlineShaderForUE\hspace{0.3em}—\hspace{0.3em}UE 描边后处理Shader} \hfill 2024 \\
-Unreal Engine · HLSL \hfill \faGithub\ \href{https://github.com/WangSimiao2000/OutlineShaderForUE}{GitHub}
+Unreal Engine · HLSL \hfill \smallurl{https://github.com/WangSimiao2000/OutlineShaderForUE}
 \begin{itemize}
   \item 实现基于深度和法线的后处理描边效果，支持距离衰减、自定义深度遮罩、粗细可调
 \end{itemize}
@@ -139,9 +141,9 @@ Unreal Engine · HLSL \hfill \faGithub\ \href{https://github.com/WangSimiao2000/
 \textbf{利兹大学计算机图形学课程项目} \hfill 2023 -- 2024 \\
 C++ · OpenGL · GLSL
 \begin{itemize}
-  \item 建模与渲染：蒙特卡洛路径追踪、斯涅尔折射、菲涅尔反射、法线贴图、Blinn-Phong 光照 \href{https://github.com/WangSimiao2000/Foundations_of_Modelling_and_Rendering}{\faGithub}
-  \item 动画与模拟：骨骼动画多坐标系变换、多动画周期混合（转向/跑步/静止）、粒子系统 \href{https://github.com/WangSimiao2000/Animation_and_Simulation}{\faGithub}
-  \item 几何处理：有向边数据结构、流形检测与属数计算、Loop 曲面细分、纹理映射展开 \href{https://github.com/WangSimiao2000/Geometric-Processing}{\faGithub}
+  \item 建模与渲染：蒙特卡洛路径追踪、斯涅尔折射、菲涅尔反射、法线贴图、Blinn-Phong 光照 \\ {\small \smallurl{https://github.com/WangSimiao2000/Foundations\_of\_Modelling\_and\_Rendering}}
+  \item 动画与模拟：骨骼动画多坐标系变换、多动画周期混合（转向/跑步/静止）、粒子系统 \\ {\small \smallurl{https://github.com/WangSimiao2000/Animation\_and\_Simulation}}
+  \item 几何处理：有向边数据结构、流形检测与属数计算、Loop 曲面细分、纹理映射展开 \\ {\small \smallurl{https://github.com/WangSimiao2000/Geometric-Processing}}
 \end{itemize}
 
 % ===== 技术技能 =====
@@ -149,17 +151,14 @@ C++ · OpenGL · GLSL
 
 \begin{tabularx}{\textwidth}{@{} l X}
   \textbf{编程语言} & C++/C、Python、GLSL/HLSL \\
-  \textbf{图形相关} & OpenGL、LVGL、Unreal Engine \\
+  \textbf{图形相关} & OpenGL、Vulkan（了解）、LVGL、Unreal Engine \\
   \textbf{开发工具} & Git、CMake、Linux \\
 \end{tabularx}
 
-% ===== 语言能力 =====
-\section{\faLanguage\ 语言能力}
-
-英语 · 雅思 6.0 · 朗思笔试 B2 High Pass / 口试 C1 Pass
-
 % ===== 其他 =====
 \section{\faUser\ 其他}
+
+英语 · 雅思 6.0 · 朗思笔试 B2 High Pass / 口试 C1 Pass
 
 维护技术博客（\href{https://blog.mickeymiao.cn}{blog.mickeymiao.cn}），持续输出图形学、AI Agent、C/C++ 等技术文章
 
