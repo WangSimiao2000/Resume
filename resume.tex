@@ -14,9 +14,13 @@
 \usepackage{fontawesome5}
 
 % 字体设置
-\setCJKmainfont{Noto Serif CJK SC}
-\setCJKsansfont{Noto Sans CJK SC}
-\setmainfont{Noto Serif CJK SC}
+\setCJKmainfont{MiSans Light}[
+  BoldFont=MiSans Medium
+]
+\setCJKsansfont{MiSans Light}
+\setmainfont{MiSans Light}[
+  BoldFont=MiSans Medium
+]
 
 % 颜色
 \definecolor{primary}{HTML}{2B4C7E}
@@ -27,7 +31,7 @@
 
 % 节标题样式
 \titleformat{\section}{\large\bfseries\color{primary}}{}{0em}{}[\titlerule]
-\titlespacing*{\section}{0pt}{6pt}{4pt}
+\titlespacing*{\section}{0pt}{8pt}{5pt}
 
 % 去掉页码
 \pagestyle{empty}
@@ -36,7 +40,7 @@
 \setlength{\parindent}{0pt}
 
 % 列表样式
-\setlist[itemize]{leftmargin=1.5em, itemsep=0pt, parsep=0pt, topsep=1pt}
+\setlist[itemize]{leftmargin=1.5em, itemsep=1pt, parsep=0pt, topsep=2pt}
 
 \begin{document}
 
@@ -88,13 +92,13 @@
   \item 基于动效引擎进行穿戴系统动效应用开发
   \item 参与自动化测试框架搭建，提升图形渲染模块的测试覆盖率与效率
   \item 参与 Mesh 绘制相关功能开发，优化渲染管线性能
-  \item 向 LVGL 开源仓库贡献代码，涉及矢量路径接口重构、图像 stride 对齐修复等
+  \item 向 LVGL/ThorVG 开源仓库贡献代码，涉及接口重构与 Bug 修复
 \end{itemize}
 
 % ===== 项目经历 =====
 \section{\faCode\ 项目经历}
 
-\textbf{SnowLeopardEngine — 团队游戏引擎} \hfill 2023.09 -- 2024.06 \\
+\textbf{SnowLeopardEngine\hspace{0.3em}—\hspace{0.3em}团队游戏引擎} \hfill 2023.09 -- 2024.06 \\
 C++ · OpenGL 4.6 · PhysX · XMake \hfill \faGithub\ \href{https://github.com/SnowLeopardEngine/SnowLeopardEngine}{GitHub}
 \begin{itemize}
   \item 利兹大学7人团队课程项目，开发跨平台游戏引擎，支持 PBR 渲染、骨骼动画、后处理等
@@ -104,7 +108,7 @@ C++ · OpenGL 4.6 · PhysX · XMake \hfill \faGithub\ \href{https://github.com/S
 
 \vspace{3pt}
 
-\textbf{MinecraftSkin Raytracer — MC皮肤光追渲染器} \hfill 2024 \\
+\textbf{MinecraftSkin Raytracer\hspace{0.3em}—\hspace{0.3em}MC 皮肤光追渲染器} \hfill 2024 \\
 C++17 · Qt6 · OpenGL \hfill \faGithub\ \href{https://github.com/WangSimiao2000/MinecraftSkin_Raytracer}{GitHub}
 \begin{itemize}
   \item 独立开发纯 CPU 软件光线追踪桌面应用，将 Minecraft 皮肤渲染为高质量图像
@@ -114,7 +118,7 @@ C++17 · Qt6 · OpenGL \hfill \faGithub\ \href{https://github.com/WangSimiao2000
 
 \vspace{3pt}
 
-\textbf{InfiniteVoxelCaveWorld — 无限体素洞穴地形} \hfill 2024 \\
+\textbf{InfiniteVoxelCaveWorld\hspace{0.3em}—\hspace{0.3em}无限体素洞穴地形} \hfill 2024 \\
 C++ · OpenGL \hfill \faGithub\ \href{https://github.com/WangSimiao2000/InfiniteVoxelCaveWorld}{GitHub}
 \begin{itemize}
   \item 实现基于区块的程序化无限体素洞穴地形生成，使用 OpenSimplex2 噪声控制地形与洞穴阈值
@@ -124,7 +128,7 @@ C++ · OpenGL \hfill \faGithub\ \href{https://github.com/WangSimiao2000/Infinite
 
 \vspace{3pt}
 
-\textbf{OutlineShaderForUE — UE描边后处理Shader} \hfill 2024 \\
+\textbf{OutlineShaderForUE\hspace{0.3em}—\hspace{0.3em}UE 描边后处理Shader} \hfill 2024 \\
 Unreal Engine · HLSL \hfill \faGithub\ \href{https://github.com/WangSimiao2000/OutlineShaderForUE}{GitHub}
 \begin{itemize}
   \item 实现基于深度和法线的后处理描边效果，支持距离衰减、自定义深度遮罩、粗细可调
@@ -135,7 +139,7 @@ Unreal Engine · HLSL \hfill \faGithub\ \href{https://github.com/WangSimiao2000/
 \textbf{利兹大学计算机图形学课程项目} \hfill 2023 -- 2024 \\
 C++ · OpenGL · GLSL
 \begin{itemize}
-  \item 建模与渲染：蒙特卡洛路径追踪、斯涅尔定律折射、菲涅尔方程反射；法线贴图、高度图地形光栅化、Blinn-Phong 光照 \href{https://github.com/WangSimiao2000/Foundations_of_Modelling_and_Rendering}{\faGithub}
+  \item 建模与渲染：蒙特卡洛路径追踪、斯涅尔折射、菲涅尔反射、法线贴图、Blinn-Phong 光照 \href{https://github.com/WangSimiao2000/Foundations_of_Modelling_and_Rendering}{\faGithub}
   \item 动画与模拟：骨骼动画多坐标系变换、多动画周期混合（转向/跑步/静止）、粒子系统 \href{https://github.com/WangSimiao2000/Animation_and_Simulation}{\faGithub}
   \item 几何处理：有向边数据结构、流形检测与属数计算、Loop 曲面细分、纹理映射展开 \href{https://github.com/WangSimiao2000/Geometric-Processing}{\faGithub}
 \end{itemize}
